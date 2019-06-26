@@ -34,6 +34,8 @@ public class Commitment implements java.io.Serializable
    private gov.dhs.fema.ndgrants_rules.model.CommitmentDocumentClass commitmentDocumentClass;
    private gov.dhs.fema.ndgrants_rules.model.CommitmentDocumentType commitmentDocumentType;
 
+   private gov.dhs.fema.ndgrants_rules.model.FundFuncCode fundFuncCode;
+
    public Commitment()
    {
    }
@@ -287,6 +289,17 @@ public class Commitment implements java.io.Serializable
       this.commitmentDocumentType = commitmentDocumentType;
    }
 
+   public gov.dhs.fema.ndgrants_rules.model.FundFuncCode getFundFuncCode()
+   {
+      return this.fundFuncCode;
+   }
+
+   public void setFundFuncCode(
+         gov.dhs.fema.ndgrants_rules.model.FundFuncCode fundFuncCode)
+   {
+      this.fundFuncCode = fundFuncCode;
+   }
+
    public Commitment(
          java.lang.Long commitmentId,
          java.lang.String commitmentNo,
@@ -311,7 +324,8 @@ public class Commitment implements java.io.Serializable
          java.lang.Long financialSystemId,
          java.lang.String strFinanceCommittedAmount,
          gov.dhs.fema.ndgrants_rules.model.CommitmentDocumentClass commitmentDocumentClass,
-         gov.dhs.fema.ndgrants_rules.model.CommitmentDocumentType commitmentDocumentType)
+         gov.dhs.fema.ndgrants_rules.model.CommitmentDocumentType commitmentDocumentType,
+         gov.dhs.fema.ndgrants_rules.model.FundFuncCode fundFuncCode)
    {
       this.commitmentId = commitmentId;
       this.commitmentNo = commitmentNo;
@@ -337,6 +351,7 @@ public class Commitment implements java.io.Serializable
       this.strFinanceCommittedAmount = strFinanceCommittedAmount;
       this.commitmentDocumentClass = commitmentDocumentClass;
       this.commitmentDocumentType = commitmentDocumentType;
+      this.fundFuncCode = fundFuncCode;
    }
 
 }
