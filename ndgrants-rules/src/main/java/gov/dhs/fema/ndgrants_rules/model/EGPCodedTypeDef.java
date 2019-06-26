@@ -16,6 +16,11 @@ public class EGPCodedTypeDef extends EGPTypeDef implements java.io.Serializable
    public EGPCodedTypeDef()
    {
    }
+   
+   EGPCodedTypeDef(long id, java.lang.String code){
+       this.id = id;
+	   this.code = code;
+   }
 
    public java.lang.String getCode()
    {
