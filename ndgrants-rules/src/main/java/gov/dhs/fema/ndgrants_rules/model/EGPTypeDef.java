@@ -17,6 +17,10 @@ public class EGPTypeDef implements java.io.Serializable
    public EGPTypeDef()
    {
    }
+   
+   public EGPTypeDef (long id){
+       this.id = id;
+   }
 
    public long getId()
    {
