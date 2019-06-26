@@ -9,7 +9,7 @@ public class EGPTypeDef implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private long id;
+   protected long id;
    private java.lang.String displayName;
    private boolean active;
    private long order;
