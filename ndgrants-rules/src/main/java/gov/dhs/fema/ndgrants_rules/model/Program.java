@@ -28,6 +28,8 @@ public class Program implements java.io.Serializable
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.Commitment> commitments;
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.Term> availableTerms;
 
+   private java.util.List<gov.dhs.fema.ndgrants_rules.model.FundingOpportunity> fundingOpportunities;
+
    public Program()
    {
    }
@@ -224,6 +226,17 @@ public class Program implements java.io.Serializable
       this.availableTerms = availableTerms;
    }
 
+   public java.util.List<gov.dhs.fema.ndgrants_rules.model.FundingOpportunity> getFundingOpportunities()
+   {
+      return this.fundingOpportunities;
+   }
+
+   public void setFundingOpportunities(
+         java.util.List<gov.dhs.fema.ndgrants_rules.model.FundingOpportunity> fundingOpportunities)
+   {
+      this.fundingOpportunities = fundingOpportunities;
+   }
+
    public Program(
          java.lang.Long programId,
          gov.dhs.fema.ndgrants_rules.model.GrantorOrganization grantorOrganization,
@@ -242,7 +255,8 @@ public class Program implements java.io.Serializable
          java.util.List<gov.dhs.fema.ndgrants_rules.model.FundingStream> fundingStreams,
          java.lang.Long originalProgramId,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.Commitment> commitments,
-         java.util.List<gov.dhs.fema.ndgrants_rules.model.Term> availableTerms)
+         java.util.List<gov.dhs.fema.ndgrants_rules.model.Term> availableTerms,
+         java.util.List<gov.dhs.fema.ndgrants_rules.model.FundingOpportunity> fundingOpportunities)
    {
       this.programId = programId;
       this.grantorOrganization = grantorOrganization;
@@ -262,6 +276,7 @@ public class Program implements java.io.Serializable
       this.originalProgramId = originalProgramId;
       this.commitments = commitments;
       this.availableTerms = availableTerms;
+      this.fundingOpportunities = fundingOpportunities;
    }
 
 }
