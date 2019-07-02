@@ -25,6 +25,8 @@ public class AmendmentRequest implements java.io.Serializable
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.FormInstance> formInstances;
    private gov.dhs.fema.ndgrants_rules.model.Document documents;
 
+   private java.util.List<gov.dhs.fema.ndgrants_rules.model.AmendmentAssurance> assurances;
+
    public AmendmentRequest()
    {
    }
@@ -188,6 +190,17 @@ public class AmendmentRequest implements java.io.Serializable
       this.documents = documents;
    }
 
+   public java.util.List<gov.dhs.fema.ndgrants_rules.model.AmendmentAssurance> getAssurances()
+   {
+      return this.assurances;
+   }
+
+   public void setAssurances(
+         java.util.List<gov.dhs.fema.ndgrants_rules.model.AmendmentAssurance> assurances)
+   {
+      this.assurances = assurances;
+   }
+
    public AmendmentRequest(
          java.lang.Long amendmentRequestId,
          gov.dhs.fema.ndgrants_rules.model.Grant grant,
@@ -203,7 +216,8 @@ public class AmendmentRequest implements java.io.Serializable
          java.util.List<gov.dhs.fema.ndgrants_rules.model.Term> terms,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.ExternalAdminContact> contacts,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.FormInstance> formInstances,
-         gov.dhs.fema.ndgrants_rules.model.Document documents)
+         gov.dhs.fema.ndgrants_rules.model.Document documents,
+         java.util.List<gov.dhs.fema.ndgrants_rules.model.AmendmentAssurance> assurances)
    {
       this.amendmentRequestId = amendmentRequestId;
       this.grant = grant;
@@ -220,6 +234,7 @@ public class AmendmentRequest implements java.io.Serializable
       this.contacts = contacts;
       this.formInstances = formInstances;
       this.documents = documents;
+      this.assurances = assurances;
    }
 
 }
