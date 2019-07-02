@@ -35,6 +35,8 @@ public class Amendment implements java.io.Serializable
    private gov.dhs.fema.ndgrants_rules.model.CongressionalDistrict granteeOrgCongressionalDistrict;
    private gov.dhs.fema.ndgrants_rules.model.Organization organization;
 
+   private gov.dhs.fema.ndgrants_rules.model.AmendmentRequest amendmentRequest;
+
    public Amendment()
    {
    }
@@ -303,6 +305,17 @@ public class Amendment implements java.io.Serializable
       this.organization = organization;
    }
 
+   public gov.dhs.fema.ndgrants_rules.model.AmendmentRequest getAmendmentRequest()
+   {
+      return this.amendmentRequest;
+   }
+
+   public void setAmendmentRequest(
+         gov.dhs.fema.ndgrants_rules.model.AmendmentRequest amendmentRequest)
+   {
+      this.amendmentRequest = amendmentRequest;
+   }
+
    public Amendment(
          java.lang.Long amendmentId,
          gov.dhs.fema.ndgrants_rules.model.Grant grant,
@@ -328,7 +341,8 @@ public class Amendment implements java.io.Serializable
          gov.dhs.fema.ndgrants_rules.model.Address granteeOrgPhysicalAddress,
          gov.dhs.fema.ndgrants_rules.model.Address granteeOrgMailingAddress,
          gov.dhs.fema.ndgrants_rules.model.CongressionalDistrict granteeOrgCongressionalDistrict,
-         gov.dhs.fema.ndgrants_rules.model.Organization organization)
+         gov.dhs.fema.ndgrants_rules.model.Organization organization,
+         gov.dhs.fema.ndgrants_rules.model.AmendmentRequest amendmentRequest)
    {
       this.amendmentId = amendmentId;
       this.grant = grant;
@@ -355,6 +369,7 @@ public class Amendment implements java.io.Serializable
       this.granteeOrgMailingAddress = granteeOrgMailingAddress;
       this.granteeOrgCongressionalDistrict = granteeOrgCongressionalDistrict;
       this.organization = organization;
+      this.amendmentRequest = amendmentRequest;
    }
 
 }
