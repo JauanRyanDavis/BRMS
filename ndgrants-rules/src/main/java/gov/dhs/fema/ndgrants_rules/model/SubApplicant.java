@@ -14,6 +14,8 @@ public class SubApplicant implements java.io.Serializable
    private java.lang.Long orgId;
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.ResponsibleParty> responsibleParties;
 
+   private gov.dhs.fema.ndgrants_rules.model.Application application;
+
    public SubApplicant()
    {
    }
@@ -60,16 +62,29 @@ public class SubApplicant implements java.io.Serializable
       this.responsibleParties = responsibleParties;
    }
 
+   public gov.dhs.fema.ndgrants_rules.model.Application getApplication()
+   {
+      return this.application;
+   }
+
+   public void setApplication(
+         gov.dhs.fema.ndgrants_rules.model.Application application)
+   {
+      this.application = application;
+   }
+
    public SubApplicant(
          java.lang.Long subApplicantId,
          gov.dhs.fema.ndgrants_rules.model.Organization organization,
          java.lang.Long orgId,
-         java.util.List<gov.dhs.fema.ndgrants_rules.model.ResponsibleParty> responsibleParties)
+         java.util.List<gov.dhs.fema.ndgrants_rules.model.ResponsibleParty> responsibleParties,
+         gov.dhs.fema.ndgrants_rules.model.Application application)
    {
       this.subApplicantId = subApplicantId;
       this.organization = organization;
       this.orgId = orgId;
       this.responsibleParties = responsibleParties;
+      this.application = application;
    }
 
 }
