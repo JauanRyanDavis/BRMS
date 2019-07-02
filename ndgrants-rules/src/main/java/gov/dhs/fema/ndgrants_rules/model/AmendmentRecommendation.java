@@ -20,6 +20,8 @@ public class AmendmentRecommendation implements java.io.Serializable
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.CommitmentAmount> commitmentAmounts;
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.Document> documents;
 
+   private gov.dhs.fema.ndgrants_rules.model.AmendmentRecommendationStatus status;
+
    public AmendmentRecommendation()
    {
    }
@@ -133,6 +135,17 @@ public class AmendmentRecommendation implements java.io.Serializable
       this.documents = documents;
    }
 
+   public gov.dhs.fema.ndgrants_rules.model.AmendmentRecommendationStatus getStatus()
+   {
+      return this.status;
+   }
+
+   public void setStatus(
+         gov.dhs.fema.ndgrants_rules.model.AmendmentRecommendationStatus status)
+   {
+      this.status = status;
+   }
+
    public AmendmentRecommendation(
          java.lang.Long amendmentRecommendationId,
          gov.dhs.fema.ndgrants_rules.model.AmendmentRequest amendmentRequest,
@@ -143,7 +156,8 @@ public class AmendmentRecommendation implements java.io.Serializable
          java.util.List<gov.dhs.fema.ndgrants_rules.model.SF424CBudget> sf424cBudgets,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.Term> terms,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.CommitmentAmount> commitmentAmounts,
-         java.util.List<gov.dhs.fema.ndgrants_rules.model.Document> documents)
+         java.util.List<gov.dhs.fema.ndgrants_rules.model.Document> documents,
+         gov.dhs.fema.ndgrants_rules.model.AmendmentRecommendationStatus status)
    {
       this.amendmentRecommendationId = amendmentRecommendationId;
       this.amendmentRequest = amendmentRequest;
@@ -155,6 +169,7 @@ public class AmendmentRecommendation implements java.io.Serializable
       this.terms = terms;
       this.commitmentAmounts = commitmentAmounts;
       this.documents = documents;
+      this.status = status;
    }
 
 }
