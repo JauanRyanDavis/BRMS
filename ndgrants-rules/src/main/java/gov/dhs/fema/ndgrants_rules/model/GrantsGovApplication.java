@@ -95,6 +95,8 @@ public class GrantsGovApplication implements java.io.Serializable
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.Document> documents;
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.GrantsGovApplicationError> grantsGovApplicationErrors;
 
+   private gov.dhs.fema.ndgrants_rules.model.Application application;
+
    public GrantsGovApplication()
    {
    }
@@ -971,6 +973,17 @@ public class GrantsGovApplication implements java.io.Serializable
       this.grantsGovApplicationErrors = grantsGovApplicationErrors;
    }
 
+   public gov.dhs.fema.ndgrants_rules.model.Application getApplication()
+   {
+      return this.application;
+   }
+
+   public void setApplication(
+         gov.dhs.fema.ndgrants_rules.model.Application application)
+   {
+      this.application = application;
+   }
+
    public GrantsGovApplication(
          java.lang.Long grantsGovApplicationId,
          java.lang.String grantsGovTrackingNo,
@@ -1056,7 +1069,8 @@ public class GrantsGovApplication implements java.io.Serializable
          java.lang.String signature,
          java.util.Date signedDate,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.Document> documents,
-         java.util.List<gov.dhs.fema.ndgrants_rules.model.GrantsGovApplicationError> grantsGovApplicationErrors)
+         java.util.List<gov.dhs.fema.ndgrants_rules.model.GrantsGovApplicationError> grantsGovApplicationErrors,
+         gov.dhs.fema.ndgrants_rules.model.Application application)
    {
       this.grantsGovApplicationId = grantsGovApplicationId;
       this.grantsGovTrackingNo = grantsGovTrackingNo;
@@ -1143,6 +1157,7 @@ public class GrantsGovApplication implements java.io.Serializable
       this.signedDate = signedDate;
       this.documents = documents;
       this.grantsGovApplicationErrors = grantsGovApplicationErrors;
+      this.application = application;
    }
 
 }
