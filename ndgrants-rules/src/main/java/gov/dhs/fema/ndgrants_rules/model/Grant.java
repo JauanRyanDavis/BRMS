@@ -25,6 +25,8 @@ public class Grant implements java.io.Serializable
    private java.math.BigDecimal conditionalNonFederal;
    private java.math.BigDecimal totalConditionalProjectCost;
 
+   private gov.dhs.fema.ndgrants_rules.model.Vendor vendor;
+
    public Grant()
    {
    }
@@ -189,6 +191,16 @@ public class Grant implements java.io.Serializable
       this.totalConditionalProjectCost = totalConditionalProjectCost;
    }
 
+   public gov.dhs.fema.ndgrants_rules.model.Vendor getVendor()
+   {
+      return this.vendor;
+   }
+
+   public void setVendor(gov.dhs.fema.ndgrants_rules.model.Vendor vendor)
+   {
+      this.vendor = vendor;
+   }
+
    public Grant(
          java.lang.Long grantId,
          java.lang.String grantNo,
@@ -204,7 +216,8 @@ public class Grant implements java.io.Serializable
          java.math.BigDecimal totalCommitments,
          java.math.BigDecimal conditionalFederal,
          java.math.BigDecimal conditionalNonFederal,
-         java.math.BigDecimal totalConditionalProjectCost)
+         java.math.BigDecimal totalConditionalProjectCost,
+         gov.dhs.fema.ndgrants_rules.model.Vendor vendor)
    {
       this.grantId = grantId;
       this.grantNo = grantNo;
@@ -221,6 +234,7 @@ public class Grant implements java.io.Serializable
       this.conditionalFederal = conditionalFederal;
       this.conditionalNonFederal = conditionalNonFederal;
       this.totalConditionalProjectCost = totalConditionalProjectCost;
+      this.vendor = vendor;
    }
 
 }
