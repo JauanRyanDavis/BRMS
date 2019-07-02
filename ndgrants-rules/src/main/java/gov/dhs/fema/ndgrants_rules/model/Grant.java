@@ -12,7 +12,6 @@ public class Grant implements java.io.Serializable
    private java.lang.Long grantId;
    private java.lang.String grantNo;
    private java.lang.Long transactionSeqNumber;
-   private gov.dhs.fema.ndgrants_rules.model.SF424ABudget sf424ABudgets;
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.SF424CBudget> sf424CBudgets;
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.ExternalAdminContact> contacts;
    private java.util.List<gov.dhs.fema.ndgrants_rules.model.Term> terms;
@@ -26,6 +25,8 @@ public class Grant implements java.io.Serializable
    private java.math.BigDecimal totalConditionalProjectCost;
 
    private gov.dhs.fema.ndgrants_rules.model.Vendor vendor;
+
+   private java.util.List<gov.dhs.fema.ndgrants_rules.model.SF424ABudget> sf424ABudgets;
 
    public Grant()
    {
@@ -59,17 +60,6 @@ public class Grant implements java.io.Serializable
    public void setTransactionSeqNumber(java.lang.Long transactionSeqNumber)
    {
       this.transactionSeqNumber = transactionSeqNumber;
-   }
-
-   public gov.dhs.fema.ndgrants_rules.model.SF424ABudget getSf424ABudgets()
-   {
-      return this.sf424ABudgets;
-   }
-
-   public void setSf424ABudgets(
-         gov.dhs.fema.ndgrants_rules.model.SF424ABudget sf424ABudgets)
-   {
-      this.sf424ABudgets = sf424ABudgets;
    }
 
    public java.util.List<gov.dhs.fema.ndgrants_rules.model.SF424CBudget> getSf424CBudgets()
@@ -201,11 +191,21 @@ public class Grant implements java.io.Serializable
       this.vendor = vendor;
    }
 
+   public java.util.List<gov.dhs.fema.ndgrants_rules.model.SF424ABudget> getSf424ABudgets()
+   {
+      return this.sf424ABudgets;
+   }
+
+   public void setSf424ABudgets(
+         java.util.List<gov.dhs.fema.ndgrants_rules.model.SF424ABudget> sf424ABudgets)
+   {
+      this.sf424ABudgets = sf424ABudgets;
+   }
+
    public Grant(
          java.lang.Long grantId,
          java.lang.String grantNo,
          java.lang.Long transactionSeqNumber,
-         gov.dhs.fema.ndgrants_rules.model.SF424ABudget sf424ABudgets,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.SF424CBudget> sf424CBudgets,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.ExternalAdminContact> contacts,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.Term> terms,
@@ -217,12 +217,12 @@ public class Grant implements java.io.Serializable
          java.math.BigDecimal conditionalFederal,
          java.math.BigDecimal conditionalNonFederal,
          java.math.BigDecimal totalConditionalProjectCost,
-         gov.dhs.fema.ndgrants_rules.model.Vendor vendor)
+         gov.dhs.fema.ndgrants_rules.model.Vendor vendor,
+         java.util.List<gov.dhs.fema.ndgrants_rules.model.SF424ABudget> sf424ABudgets)
    {
       this.grantId = grantId;
       this.grantNo = grantNo;
       this.transactionSeqNumber = transactionSeqNumber;
-      this.sf424ABudgets = sf424ABudgets;
       this.sf424CBudgets = sf424CBudgets;
       this.contacts = contacts;
       this.terms = terms;
@@ -235,6 +235,7 @@ public class Grant implements java.io.Serializable
       this.conditionalNonFederal = conditionalNonFederal;
       this.totalConditionalProjectCost = totalConditionalProjectCost;
       this.vendor = vendor;
+      this.sf424ABudgets = sf424ABudgets;
    }
 
 }
