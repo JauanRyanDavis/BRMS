@@ -26,6 +26,8 @@ public class SF424Information implements java.io.Serializable
    private java.lang.String delinquentComment;
    private java.util.Date eo12372ReviewDate;
 
+   private gov.dhs.fema.ndgrants_rules.model.Eo12372Review eo12372Review;
+
    public SF424Information()
    {
    }
@@ -193,6 +195,17 @@ public class SF424Information implements java.io.Serializable
       this.eo12372ReviewDate = eo12372ReviewDate;
    }
 
+   public gov.dhs.fema.ndgrants_rules.model.Eo12372Review getEo12372Review()
+   {
+      return this.eo12372Review;
+   }
+
+   public void setEo12372Review(
+         gov.dhs.fema.ndgrants_rules.model.Eo12372Review eo12372Review)
+   {
+      this.eo12372Review = eo12372Review;
+   }
+
    public SF424Information(
          java.lang.Long sf424InformationId,
          java.lang.Long applicationId,
@@ -203,12 +216,12 @@ public class SF424Information implements java.io.Serializable
          java.util.List<gov.dhs.fema.ndgrants_rules.model.CongressionalDistrict> projectCongressionalDistricts,
          java.math.BigDecimal federalFunding,
          java.math.BigDecimal applicantFunding,
-         java.math.BigDecimal stateFunding,
-         java.math.BigDecimal localFunding,
+         java.math.BigDecimal stateFunding, java.math.BigDecimal localFunding,
          java.math.BigDecimal otherFunding,
          java.math.BigDecimal programIncomeFunding,
          java.lang.Boolean delinquentOnFederalDebt,
-         java.lang.String delinquentComment, java.util.Date eo12372ReviewDate)
+         java.lang.String delinquentComment, java.util.Date eo12372ReviewDate,
+         gov.dhs.fema.ndgrants_rules.model.Eo12372Review eo12372Review)
    {
       this.sf424InformationId = sf424InformationId;
       this.applicationId = applicationId;
@@ -226,6 +239,7 @@ public class SF424Information implements java.io.Serializable
       this.delinquentOnFederalDebt = delinquentOnFederalDebt;
       this.delinquentComment = delinquentComment;
       this.eo12372ReviewDate = eo12372ReviewDate;
+      this.eo12372Review = eo12372Review;
    }
 
 }
