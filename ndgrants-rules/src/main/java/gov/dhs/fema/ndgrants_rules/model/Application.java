@@ -35,6 +35,8 @@ public class Application implements java.io.Serializable
    private java.math.BigDecimal grantWritingFee;
    private java.math.BigDecimal applicationPercentageComplete;
 
+   private gov.dhs.fema.ndgrants_rules.model.Grant grant;
+
    public Application()
    {
    }
@@ -306,6 +308,16 @@ public class Application implements java.io.Serializable
       this.applicationPercentageComplete = applicationPercentageComplete;
    }
 
+   public gov.dhs.fema.ndgrants_rules.model.Grant getGrant()
+   {
+      return this.grant;
+   }
+
+   public void setGrant(gov.dhs.fema.ndgrants_rules.model.Grant grant)
+   {
+      this.grant = grant;
+   }
+
    public Application(
          java.lang.Long applicationId,
          java.lang.String applicationNo,
@@ -331,7 +343,8 @@ public class Application implements java.io.Serializable
          java.lang.Boolean ndgrantsassoc,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.SubApplicant> subApplicants,
          java.math.BigDecimal grantWritingFee,
-         java.math.BigDecimal applicationPercentageComplete)
+         java.math.BigDecimal applicationPercentageComplete,
+         gov.dhs.fema.ndgrants_rules.model.Grant grant)
    {
       this.applicationId = applicationId;
       this.applicationNo = applicationNo;
@@ -358,6 +371,7 @@ public class Application implements java.io.Serializable
       this.subApplicants = subApplicants;
       this.grantWritingFee = grantWritingFee;
       this.applicationPercentageComplete = applicationPercentageComplete;
+      this.grant = grant;
    }
 
 }
