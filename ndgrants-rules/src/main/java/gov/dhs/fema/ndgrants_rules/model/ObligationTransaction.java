@@ -19,6 +19,8 @@ public class ObligationTransaction implements java.io.Serializable
    private java.lang.Long financialSystemTransactionNo;
    private java.util.Date dateTimeLastUpdate;
 
+   private gov.dhs.fema.ndgrants_rules.model.ObligationCommitment obligationCommitment;
+
    public ObligationTransaction()
    {
    }
@@ -118,6 +120,17 @@ public class ObligationTransaction implements java.io.Serializable
       this.dateTimeLastUpdate = dateTimeLastUpdate;
    }
 
+   public gov.dhs.fema.ndgrants_rules.model.ObligationCommitment getObligationCommitment()
+   {
+      return this.obligationCommitment;
+   }
+
+   public void setObligationCommitment(
+         gov.dhs.fema.ndgrants_rules.model.ObligationCommitment obligationCommitment)
+   {
+      this.obligationCommitment = obligationCommitment;
+   }
+
    public ObligationTransaction(
          java.lang.Long obligationTransactionId,
          java.lang.Long obligationCommitmentId,
@@ -127,7 +140,8 @@ public class ObligationTransaction implements java.io.Serializable
          java.lang.String financialSystemMessage,
          java.lang.String financialSystemCode,
          java.lang.Long financialSystemTransactionNo,
-         java.util.Date dateTimeLastUpdate)
+         java.util.Date dateTimeLastUpdate,
+         gov.dhs.fema.ndgrants_rules.model.ObligationCommitment obligationCommitment)
    {
       this.obligationTransactionId = obligationTransactionId;
       this.obligationCommitmentId = obligationCommitmentId;
@@ -138,6 +152,7 @@ public class ObligationTransaction implements java.io.Serializable
       this.financialSystemCode = financialSystemCode;
       this.financialSystemTransactionNo = financialSystemTransactionNo;
       this.dateTimeLastUpdate = dateTimeLastUpdate;
+      this.obligationCommitment = obligationCommitment;
    }
 
 }
