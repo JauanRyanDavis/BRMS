@@ -18,6 +18,8 @@ public class AwardRecommendation implements java.io.Serializable
    private java.math.BigDecimal totalCommitments;
    private java.lang.String strtotalCommitments;
 
+   private gov.dhs.fema.ndgrants_rules.model.AwardRecommendationStatus awardRecommendationStatus;
+
    public AwardRecommendation()
    {
    }
@@ -107,6 +109,17 @@ public class AwardRecommendation implements java.io.Serializable
       this.strtotalCommitments = strtotalCommitments;
    }
 
+   public gov.dhs.fema.ndgrants_rules.model.AwardRecommendationStatus getAwardRecommendationStatus()
+   {
+      return this.awardRecommendationStatus;
+   }
+
+   public void setAwardRecommendationStatus(
+         gov.dhs.fema.ndgrants_rules.model.AwardRecommendationStatus awardRecommendationStatus)
+   {
+      this.awardRecommendationStatus = awardRecommendationStatus;
+   }
+
    public AwardRecommendation(
          java.lang.Long awardRecommendationId,
          gov.dhs.fema.ndgrants_rules.model.Application application,
@@ -115,7 +128,8 @@ public class AwardRecommendation implements java.io.Serializable
          java.util.List<gov.dhs.fema.ndgrants_rules.model.SF424CBudget> sf424CBudgets,
          java.util.List<gov.dhs.fema.ndgrants_rules.model.CommitmentAmount> commitmentAmounts,
          java.math.BigDecimal totalCommitments,
-         java.lang.String strtotalCommitments)
+         java.lang.String strtotalCommitments,
+         gov.dhs.fema.ndgrants_rules.model.AwardRecommendationStatus awardRecommendationStatus)
    {
       this.awardRecommendationId = awardRecommendationId;
       this.application = application;
@@ -125,6 +139,7 @@ public class AwardRecommendation implements java.io.Serializable
       this.commitmentAmounts = commitmentAmounts;
       this.totalCommitments = totalCommitments;
       this.strtotalCommitments = strtotalCommitments;
+      this.awardRecommendationStatus = awardRecommendationStatus;
    }
 
 }
